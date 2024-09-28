@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona z grami</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="left_banner"><a href="index.html"><img src="baner2.png"></a></div>
+    <div id="right_banner">
+        <a href="login.html">
+            <div class="right_banner_buttons"><b>Login</b></div>
+        </a>
+        <a href="profile.html">
+            <div class="right_banner_buttons"><b>Profile</b></div>
+        </a>
+    </div>
+    <div>
+        <br><br>
+        <div id="bar">
+            <a href="index.html">
+                <div class="button"><b>Index</b></div>
+            </a>
+            <a href="druga.html">
+                <div class="button"><b>Druga</b></div>
+            </a>
+
+            <div class="button" onClick='clickMainContent()'><b>Odkrywaj</b></div>
+
+            <a href="#">
+                <div class="button"><b>Options</b></div>
+            </a>
+            <a href="#">
+                <div class="button"><b>Ustawienia</b></div>
+            </a>
+            <a href="#">
+                <div class="button"><b>Pomoc</b></div>
+            </a>
+        </div>
+        <div id="main">
+            <h1>Profile</h1>
+
+            <div id="avatar">
+                <?php
+                    $mysqli_connect('localhost', 'root', '', 'gamzone') or die("Błąd połączenia z bazą danych");
+
+                    $zapytanie = mysqli_query("SELECT img FROM user WHERE user_id='$myID'"); <!--"$myID to będzie aktualne ID zalogowanej osoby, jeżeli user nie zalogowany to po kliknięciu na profil karze się zalogować!!!"-->
+                ?>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

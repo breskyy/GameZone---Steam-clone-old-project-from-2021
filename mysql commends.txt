@@ -1,0 +1,46 @@
+### STWORZENIE BAZY DANYCH
+
+CREATE DATABASE gamzone
+
+### STWORZENIE TABELI GIER
+
+CREATE TABLE game (
+	game_id		INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    	title		VARCHAR(250) NOT NULL,
+    	type		VARCHAR(50) NOT NULL,
+    	release_date	DATE,		
+    	produce		VARCHAR(150) NOT NULL,
+    	rate		CHAR(3) 
+)
+## DODANIE DO TABELI GIER KOLUMNY "price"
+
+ALTER TABLE game ADD COLUMN price decimal(15,2) NOT NULL AFTER
+produce; 
+
+### STWORZENIE TABELI GRACZY
+
+CREATE TABLE user (
+	user_id		INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	displayed_nick	VARCHAR(250) NOT NULL,
+	nickname	VARCHAR(250) NOT NULL,
+	email		VARCHAR(50) NOT NULL,
+	password	VARCHAR(250) NOT NULL,
+	create_date	DATETIME NOT NULL,
+	games_owned	INT(6) NOT NULL
+);
+
+CREATE TABLE owned_games (
+	user_id		INT(6) UNSIGNED PRIMARY KEY,
+	game_id		INT (6) NOT NULL,
+	buy_time	DATETIME NOT NULL,
+	price		decimal(15,2) NOT NULL
+)
+
+ALTER TABLE game ADD img varchar(256)
+
+ALTER TABLE owned_games ADD COLUMN buy_date VARCHAR(256) AFTER game_id
+
+
+//Dodawanie gier
+INSERT INTO game(title, type, release_date, produce, price, rate, img) 
+VALUES ('7 Days To Die','Horror','2013-12-13','The Fun Pimps/Telltale Games','25','5','games_img/7dtd.png')

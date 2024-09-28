@@ -1,0 +1,161 @@
+body {
+  background-color: #0f0c2e;
+  min-height: 700px;
+  color: aliceblue;
+  font-family: monospace;
+}
+#left_banner {
+    float: left;
+
+    width: 19%;
+    height: 70px;
+    border-right: 5px solid aliceblue;
+}
+#right_banner {
+    width: auto;
+    
+    height: 70px;
+}
+.right_banner_buttons {
+    float: right;
+    
+    margin-top: 15px;
+    margin-right: 10px;
+
+    width: 100px;
+    border-radius: 11px;
+    border: 3px solid aliceblue;
+    text-align: center;
+    padding: 0.5em;
+    background-color: #161646;
+}
+.right_banner_buttons:hover {
+  
+  background-color: #4747859a;
+}
+#bar {
+  width: 19%;
+  min-height: 100%;
+  border-right: 3px solid aliceblue;
+  float: left;
+  clear: left;
+  position: sticky;
+  top: 0;
+}
+.button {
+  background-color: #161646;
+  padding: 25px;
+  margin: 20px 20px 25px 0px; /* górny prawy dolny lewy */
+  border-radius: 10px;
+  text-align: center;
+}
+.button:hover {
+  background-color: #4747859a;
+}
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+#main, #main2 {
+  background-color: #161646;
+  min-height: 600px;
+  width: 75%;
+  border-radius: 25px;
+  margin-top: 15px;
+  margin-right: 10px;
+  padding: 30px;
+  float: right;
+
+  overflow: hidden;
+}
+#main h1 {
+  font-size: 3em;
+  margin-left: 35px;
+}
+
+.game {
+  float: left;
+  text-align: center;
+  padding: 30px;
+}
+.game_img {
+  width: 177px;
+  height: 264px;
+}
+.game_img:hover {
+  opacity: 0.2;
+}
+.game_title {
+  font-size: 20px;
+  margin: 0px;
+}
+.game_type {
+  margin-top: 3px;
+  font-weight: bold;
+  color: crimson;
+  float: center;
+}
+.game_price {
+  margin: 0px;
+  float: right;
+  color: goldenrod;
+}
+.game_rate {
+  float: left;
+  font-weight: bold;
+  color: orange;
+}
+
+#login-area {
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+
+  border: 3px solid aliceblue;
+  border-radius: 11px;
+}
+h1.login {
+  vertical-align: inherit;
+}
+input.login_inputs {
+  text-align: center;
+}
+.login_button {
+  padding: 15px;
+  width: 200px;
+  font-weight: bold;
+  color: white;
+  border: 3px solid rgb(0, 50, 0);
+  border-radius: 10px;
+  background-color: rgba(3, 99, 3, 0.644);
+}
+.login_button:hover {
+  background-color: rgba(3, 99, 3);
+  color: white;
+}
+.login_pass_reset_link:hover {
+  color: green;
+}
+.pass_reset_login_link:hover {
+  color: green;
+}
+
+.reset_button {
+  padding: 15px;
+  width: 200px;
+  font-weight: bold;
+  color: white;
+  border: 3px solid rgb(100, 0, 0);
+  border-radius: 10px;
+  background-color: rgba(202, 7, 7, 0.644);
+}
+.reset_button:hover {
+  background-color: rgba(202, 7, 7);
+  color: white;
+}
+/* #0f0c2e
+#161646
+//stary kolor buttonów
+  #1a1564
